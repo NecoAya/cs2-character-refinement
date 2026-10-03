@@ -1,0 +1,33 @@
+{
+  "example_only": true,
+  "official_reference_sha256": null,
+  "source_sha256": null,
+  "compiled_sha256": null,
+  "view": null,
+  "coordinates": {
+    "units": null,
+    "forward_axis": null,
+    "up_axis": null
+  },
+  "official_bones": [],
+  "missing_source_bones": [],
+  "missing_compiled_bones": [],
+  "ancestor_chains": [],
+  "bone_mapping": [],
+  "bind_matrix_comparison": [],
+  "constraints": [],
+  "constraint_order_comparison": [],
+  "named_skin_comparison": {
+    "status": "not_run",
+    "uv": "not_run",
+    "topology": "not_run",
+    "weights": "not_run"
+  },
+  "animation_sampling": {
+    "full_official_chain": "not_run",
+    "procedural_constraints": "not_run",
+    "actions": []
+  },
+  "runtime_acceptance": "pending",
+  "limitations": ["Empty audit example is not a passing result"]
+}

@@ -1,0 +1,37 @@
+{
+  "example_only": true,
+  "project_id": "example-character",
+  "request_kind": "diagnose",
+  "goal": "Diagnose a user-selected issue without changing protected content",
+  "baseline": {
+    "source_sha256": null,
+    "compiled_sha256": null,
+    "runtime_identity": "unconfirmed",
+    "accepted_scope": []
+  },
+  "target_parts": [],
+  "protected_parts": [],
+  "physics_intent": {},
+  "hypothesis": null,
+  "expected_changes": [],
+  "temporary_tradeoffs": [],
+  "budget": {
+    "texture_bytes_limit": null,
+    "texture_scope": "referenced compiled texture closure; deduplicate shared resources",
+    "triangle_limit": null,
+    "triangle_scope": "explicitly distinguish visible selection from all stored LODs"
+  },
+  "verification": {
+    "source_inspection": "not_run",
+    "compilation": "not_run",
+    "offline_regression": "not_run",
+    "runtime_actions": [],
+    "overall_user_feedback": null
+  },
+  "delivery": {
+    "package_kind": null,
+    "required_base": null,
+    "restore_plan": null,
+    "installed_by_workflow": false
+  }
+}

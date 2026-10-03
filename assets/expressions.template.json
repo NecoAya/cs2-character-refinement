@@ -1,0 +1,57 @@
+{
+  "example_only": true,
+  "schema_version": 1,
+  "mode": "reserve",
+  "implementation_status": "reserved",
+  "player_model": null,
+  "source_audit": {
+    "status": "not_run",
+    "shape_keys": [],
+    "face_bones": [],
+    "mouth_mesh_groups": [],
+    "original_data_preserved": null,
+    "missing_data": []
+  },
+  "channels": ["emotion", "mouth", "blink"],
+  "controls": [],
+  "control_contract": {
+    "required": ["id", "channel", "representation", "source_targets", "default", "range", "compiler_binding", "status"],
+    "representation_values": ["morph", "face_bones", "mesh_groups", "combination"],
+    "status_values": ["reserved", "authored", "compiled", "runtime_verified"],
+    "stable_ids_not_compiler_indices": true
+  },
+  "presets": [],
+  "neutral_preset_id": null,
+  "mix_rules": [],
+  "wardrobe_compatibility": [],
+  "compiled_bindings": {},
+  "runtime_adapter": {
+    "status": "unimplemented",
+    "entrypoint": null,
+    "morph_control_capability": "unverified",
+    "face_bone_control_capability": "unverified",
+    "multiplayer_sync": "unverified",
+    "restore_on_spawn": true,
+    "preserve_on_unrelated_wardrobe_change": true,
+    "audio_lip_sync": {"enabled": false, "status": "unimplemented"}
+  },
+  "optimization": {
+    "preserve_source_expression_data": true,
+    "remap_all_targets_when_topology_changes": true,
+    "validate_deformed_states": true,
+    "reuse_base_face_mesh": true,
+    "avoid_full_character_per_expression": true,
+    "include_in_shared_wardrobe_package_budget": true,
+    "max_expression_data_mib": null,
+    "base_mesh_bytes": null,
+    "all_expression_data_bytes": null,
+    "incremental_bytes_by_control": {},
+    "runtime_measurements": []
+  },
+  "validation": {
+    "offline_status": "not_run",
+    "game_status": "not_run",
+    "tested_controls_and_mixes": [],
+    "pending": ["audit original facial data", "export and compile supported representations", "implement verified runtime control", "check mouth and eyelid extremes and mixtures", "measure expression data size", "user gameplay checks"]
+  }
+}

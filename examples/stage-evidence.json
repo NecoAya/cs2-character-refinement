@@ -1,0 +1,20 @@
+{
+  "example_only": true,
+  "status": "not_run",
+  "summary": "Replace this template with an actual completed-stage report",
+  "checks": [
+    {
+      "name": "source_to_export_contract",
+      "status": "not_run",
+      "method": null,
+      "measured_value": null,
+      "expected_value": null,
+      "evidence_files": []
+    }
+  ],
+  "artifacts": [],
+  "protected_checks": [],
+  "tool_versions": {},
+  "runtime_acceptance": "pending",
+  "limitations": ["Example only; no model has been inspected or authored"]
+}

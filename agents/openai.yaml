@@ -1,0 +1,6 @@
+interface:
+  display_name: "CS2 角色全流程制作与排错"
+  short_description: "从转模、官方骨架与手袖到物理、优化、编译交付，完整记录验证与排错"
+  default_prompt: "使用 $cs2-character-refinement 完成当前 CS2 角色制作或局部修复，按阶段执行造型、骨架、手袖、物理、持枪、优化与交付，保留接受版并记录验证。"
+policy:
+  allow_implicit_invocation: true

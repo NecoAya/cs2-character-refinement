@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "route": "new-character-authoring",
+  "mode": "auto",
+  "checkpoints": [],
+  "request": {
+    "source_root": null,
+    "outfit": null,
+    "reference_models": [],
+    "wardrobe": {
+      "mode": "reserve",
+      "manifest_template": "assets/wardrobe.template.json",
+      "slots": [
+        "outfit",
+        "makeup",
+        "iris",
+        "ears",
+        "tail"
+      ],
+      "player_model_count": 1,
+      "preserve_mesh_and_material_boundaries": true,
+      "consider_shared_resources_and_incremental_size": true,
+      "runtime_switching_status": "unimplemented",
+      "manifest_output_pattern": "stages/{stage}/wardrobe.json"
+    },
+    "firstperson": {
+      "hands": "user_supplied",
+      "hand_manifest": null,
+      "hand_manifest_sha256": null,
+      "input_status": "required_before_authoring",
+      "sleeves": "from_user_character",
+      "nails": "configurable_material",
+      "preserve_base_hand_geometry": true
+    },
+    "physics": {
+      "hair": true,
+      "ears": "if present",
+      "tail": "if present",
+      "clothes": "user preference",
+      "idle_wind": "configure after stable moving roots",
+      "response": {
+        "chain_profiles": [],
+        "return_time_seconds": null,
+        "low_speed_validation": "not_tested",
+        "gunfire": {
+          "mode": "native_animation",
+          "dedicated_driver_status": "unimplemented",
+          "validation_status": "not_tested"
+        }
+      }
+    },
+    "hitboxes": {
+      "hands": "one sphere per hand",
+      "lower_limb": "thigh, shin, foot",
+      "fit": "moderately padded body contour"
+    },
+    "holding": {
+      "player_models": 1
+    },
+    "optimization": {
+      "priority": "silhouette, face, hands, then package size"
+    },
+    "test_operator": "user",
+    "expressions": {
+      "mode": "reserve",
+      "manifest_template": "assets/expressions.template.json",
+      "manifest_output_pattern": "stages/{stage}/expressions.json",
+      "channels": [
+        "emotion",
+        "mouth",
+        "blink"
+      ],
+      "preserve_original_facial_data": true,
+      "validate_deformed_states_during_optimization": true,
+      "include_expression_data_in_package_budget": true,
+      "runtime_control_status": "unimplemented",
+      "audio_lip_sync": false
+    }
+  },
+  "stages": [
+    {
+      "id": "intake",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/intake/result.json",
+        "stages/intake/wardrobe.json",
+        "stages/intake/expressions.json"
+      ]
+    },
+    {
+      "id": "appearance",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/appearance/result.json",
+        "stages/appearance/wardrobe.json",
+        "stages/appearance/expressions.json"
+      ]
+    },
+    {
+      "id": "rig",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/rig/result.json",
+        "stages/rig/wardrobe.json",
+        "stages/rig/expressions.json"
+      ]
+    },
+    {
+      "id": "firstperson",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/firstperson/result.json",
+        "stages/firstperson/wardrobe.json",
+        "stages/firstperson/expressions.json"
+      ]
+    },
+    {
+      "id": "physics",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json. Read references/physics.md. Record selected chains, per-component bending/return goals, compiled-check requirements and response validation scope in result.json. Do not mark a dedicated gunfire driver implemented from native animation response or general visual acceptance.",
+      "outputs": [
+        "stages/physics/result.json",
+        "stages/physics/wardrobe.json",
+        "stages/physics/expressions.json"
+      ]
+    },
+    {
+      "id": "hitboxes",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/hitboxes/result.json",
+        "stages/hitboxes/wardrobe.json",
+        "stages/hitboxes/expressions.json"
+      ]
+    },
+    {
+      "id": "holding",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/holding/result.json",
+        "stages/holding/wardrobe.json",
+        "stages/holding/expressions.json"
+      ]
+    },
+    {
+      "id": "optimization",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/optimization/result.json",
+        "stages/optimization/wardrobe.json",
+        "stages/optimization/expressions.json"
+      ]
+    },
+    {
+      "id": "compile",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/compile/result.json",
+        "stages/compile/wardrobe.json",
+        "stages/compile/expressions.json"
+      ]
+    },
+    {
+      "id": "validate",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/validate/result.json",
+        "stages/validate/wardrobe.json",
+        "stages/validate/expressions.json"
+      ]
+    },
+    {
+      "id": "package",
+      "kind": "agent",
+      "instruction": "Read references/stages.md, perform this stage, write actual artifacts and evidence. Do not mark unimplemented work passed. For request.wardrobe, read references/wardrobe.md and write this stage own wardrobe.json; inherit previous stage data without editing prior outputs. For request.expressions, read references/expressions.md; audit and preserve original facial data, and write this stage own expressions.json.",
+      "outputs": [
+        "stages/package/result.json",
+        "stages/package/wardrobe.json",
+        "stages/package/expressions.json"
+      ]
+    }
+  ],
+  "project": {
+    "id": null,
+    "source": null,
+    "source_type": null,
+    "tools": {},
+    "model_namespace": null
+  }
+}

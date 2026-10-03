@@ -1,0 +1,50 @@
+{
+  "example_only": true,
+  "schema_version": 1,
+  "mode": "reserve",
+  "implementation_status": "reserved",
+  "player_model": null,
+  "slots": {
+    "outfit": {"selection": "one", "representation": "mesh_groups", "allow_none": false},
+    "makeup": {"selection": "one", "representation": "material_binding", "allow_none": false},
+    "iris": {"selection": "one", "representation": "material_binding", "allow_none": false},
+    "ears": {"selection": "one", "representation": "mesh_groups", "allow_none": true},
+    "tail": {"selection": "one", "representation": "mesh_groups", "allow_none": true}
+  },
+  "defaults": {"outfit": null, "makeup": null, "iris": null, "ears": null, "tail": null},
+  "options": [],
+  "option_contract": {
+    "required": ["id", "slot", "label", "status", "source_assets", "mesh_groups", "material_bindings", "shared_resource_ids", "root_bones", "body_hide_groups", "firstperson_sleeve_option", "physics_profile", "requires", "excludes"],
+    "status_values": ["reserved", "authored", "compiled", "runtime_verified"],
+    "stable_ids_not_compiler_indices": true
+  },
+  "rules": [],
+  "physics_profiles": {},
+  "compiled_bindings": {},
+  "runtime_adapter": {
+    "status": "unimplemented",
+    "entrypoint": null,
+    "material_switch_capability": "unverified",
+    "inactive_physics_control": "unverified",
+    "restore_on_spawn": true,
+    "apply_validated_selection_together": true
+  },
+  "size_budget": {
+    "max_package_mib": null,
+    "max_active_triangles": null,
+    "baseline_single_outfit_bytes": null,
+    "all_options_package_bytes": null,
+    "active_selection_measurements": [],
+    "incremental_bytes_by_option": {},
+    "deduplicate_resource_closure": true,
+    "shared_body_rig_and_hands": true,
+    "hidden_options_count_toward_package": true,
+    "avoid_full_texture_cartesian_product": true
+  },
+  "validation": {
+    "offline_status": "not_run",
+    "game_status": "not_run",
+    "tested_selections": [],
+    "pending": ["author option mappings", "compile actual group bindings", "implement runtime switching", "verify material control capability", "measure package and active costs", "user gameplay checks"]
+  }
+}
