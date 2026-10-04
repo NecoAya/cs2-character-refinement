@@ -97,3 +97,5 @@ cs2-character-refinement/
 [验证示例](references/evidence-case.md) 说明不同检查能支持的结论及其边界，不包含个人模型履历，也不作为参数配方。X 轴沿骨链、指向身体中心与朝向角色前方需明确区分，详见 [轴向](references/axes-and-binding.md)。
 
 本仓库可公开下载；下载与发布不会自动安装到本机，也不会修改角色。仓库由所有者维护，协作方式见 [维护规范](CONTRIBUTING.md)。此项目非 Valve / OpenAI 官方项目，暂未指定开源许可证；公开可见不改变上游及第三方的许可状态，模型素材的授权也不随技能仓库转移。
+
+##特别感谢 Ruiyi Welkin、雨夜听风眠 等 大佬们的帮助（排名不分先后
